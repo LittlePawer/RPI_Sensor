@@ -51,3 +51,6 @@ step = 10
 # To Dos:
 1. `sync` is not developed yet which will be used to synchronize data from RPI to some other PC for backups
 2. Many other functions could be added according to the needs
+
+# Note:
+1. If one want to access the data universally, one could use ZeroTier to set all devices into one "cloud net"
