@@ -169,7 +169,8 @@ def SetupDB(DBConfig_Dict):
         output_lines = ExcuteRemoteCMD(ssh, cmd)
         for line in output_lines:
             if user not in str(line): continue
-            token = line[str(line).find("\\t\\t\\t\\t")+8 : str(line).find("==\t")+2]
+            token = str(line)[str(line).find("\\t\\t\\t\\t")+8: str(line).find("==\\t")+2]
+            print(token)
     else:
         cmd = "influx auth list"
         output_lines = ExcuteRemoteCMD(ssh, cmd)

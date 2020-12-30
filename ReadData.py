@@ -1,6 +1,6 @@
 import argparse
 import logging
-import os,sys, copy
+import os,sys,copy
 import Utils
 
 parser = argparse.ArgumentParser()
@@ -15,7 +15,7 @@ logger.info('>>> ... Get input options ... <<<')
 for setting in dir(options):
     if not setting[0] == "_":
         logger.info("Setting: {: >20} {: >40}".format(setting, eval("options.%s" % setting)))
-    
+
 # Read config file first!
 if not os.path.exists(options.ConfigFile):
     logger.error('Not a correct config file! Abort!')
